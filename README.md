@@ -1,20 +1,19 @@
-# Mod3-MHW-Importer
-Blender Mod3 Import-Exporter for Monster Hunter World
+# Easier_Mod3_Importer_Exporter
+Easier Blender Mod3 Importer-Exporter for Monster Hunter World.
 
 # Documentation
-Documentation on functionality can be found on https://github.com/Ezekial711/MonsterHunterWorldModding/wiki/Asterisk's-Plugin-Features.  
+To do.
 
-Additionaly under Asterisk's Plugin Notes are notes on the format that are not explained on the research template and cover advanced functionality.
+# Installation
+Download the addon by clicking Code > Download Zip.
 
-# Installation  
-As any other blender plugin. Download the zip of the project. Create a folder in your blender addon folder and drag the files in the zip there.
+In Blender, go to Edit > Preferences > Addons, then click "Install" in the top right.
 
-# Author
+Navigate to the downloaded zip file for this addon and click "Install Addon". The addon should then be usable.
+
+To update this addon, navigate to Preferences > Add-ons > Easier Mod3 Importer Exporter and press the "Check for update" button.
+
+
+# Original Author
 * **AsteriskAmpersand/\*&**
 
-# Acknowledgements
-* **Lukas Scone/Predator** - For the initial reverse engineering of the MT Framework Model Format. - [Predator's Dev Blog](https://lukascone.wordpress.com/2017/06/18/mt-framework-tools/)
-* **CrazyT** - For his work on the original blender importer plugin and his help during the coding of this version. - [CrazyT's Github User Page](https://github.com/TheCrazyT)
-* **Jodo** - For his tex to dds converter and compiling a custom version for this project. - [Jodo's MHW Modding Site](http://www.mhwmod.com/)
-* **Cristian Năvălici** - For his crc32/crcjam code for python. - [PyCRC Project Page](https://pypi.org/project/PyCRC/#description)
-* **Chuck Walbourn** - For the DirectXTex library for dds to png convertor. - [DirectXTex Github Repo](https://github.com/Microsoft/DirectXTex/wiki)
