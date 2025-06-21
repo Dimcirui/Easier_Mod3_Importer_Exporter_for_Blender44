@@ -3,6 +3,7 @@
 Created on Sun Mar 31 03:11:30 2019
 
 @author: AsteriskAmpersand
+Modified for Blender 4.4 compatibility - Fixed use_auto_smooth issue
 """
 
 import bpy
@@ -277,6 +278,7 @@ class BlenderImporterAPI(ModellingAPI):
     
     @staticmethod
     def setNormals(normals, meshpart):
+        """Set custom normals - Blender 4.4 compatible version"""
         meshpart.update(calc_edges=True)
         #meshpart.normals_split_custom_set_from_vertices(normals)
         
@@ -287,8 +289,13 @@ class BlenderImporterAPI(ModellingAPI):
         #meshpart.normals_split_custom_set(tuple(zip(*(iter(clnors),) * 3)))
         meshpart.normals_split_custom_set_from_vertices([normalize(v) for v in normals])
         #meshpart.normals_split_custom_set([normals[loop.vertex_index] for loop in meshpart.loops])
-        meshpart.use_auto_smooth = True
-        bpy.types.View3DOverlay.show_edge_sharp = True
+        
+        # IMPORTANT: In Blender 4.1+, use_auto_smooth has been removed
+        # The custom normals are already set above, which is sufficient
+        # DO NOT try to access meshpart.use_auto_smooth
+        
+        # Note: bpy.types.View3DOverlay.show_edge_sharp is a UI preference, not a mesh property
+        # It affects all meshes in the viewport, so we skip it to avoid side effects
         
         #db
     

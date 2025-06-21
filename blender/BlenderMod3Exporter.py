@@ -271,8 +271,8 @@ class BlenderExporterAPI(ModellingAPI):
     
     @staticmethod
     def loopValues(mesh, useSplit, errorHandler):
-        if not useSplit or not mesh.use_auto_smooth:
-            mesh.use_auto_smooth = True
+        if not useSplit:
+            # mesh.use_auto_smooth = True  # Removed for Blender 4.4
             mesh.normals_split_custom_set_from_vertices([vert.normal for vert in mesh.vertices])
         try:
             mesh.calc_tangents()
