@@ -1,6 +1,8 @@
 # Mod3-MHW-Importer
 Blender Mod3 Import-Exporter for Monster Hunter World
 
+Compatible for Blender 4.4
+
 # Documentation
 Documentation on functionality can be found on https://github.com/Ezekial711/MonsterHunterWorldModding/wiki/Asterisk's-Plugin-Features.  
 
